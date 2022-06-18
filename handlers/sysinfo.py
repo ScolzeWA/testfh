@@ -24,6 +24,7 @@ def humanbytes(size):
 
 @Client.on_message(command(["sysinfo"]) & ~filters.edited)
 async def give_sysinfo(client, message):
+    await message.delete()
     splatform = platform.system()
     platform_release = platform.release()
     platform_version = platform.version()
@@ -35,14 +36,14 @@ async def give_sysinfo(client, message):
     ram = humanbytes(round(psutil.virtual_memory().total))
     cpu_freq = psutil.cpu_freq().current
     if cpu_freq >= 1000:
-        cpu_freq = f"{round(cpu_freq / 1000, 2)}ɢʜᴢ"
-    else:​
-        cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
+        cpu_freq = f"{round(cpu_freq / 1000, 2)}GHz"
+    else:
+        cpu_freq = f"{round(cpu_freq, 2)}MHz"
     du = psutil.disk_usage(client.workdir)
     psutil.disk_io_counters()
     disk = f"{humanbytes(du.used)} / {humanbytes(du.total)} " f"({du.percent}%)"
     cpu_len = len(psutil.Process().cpu_affinity())
-    wtf = f""" **•• sʏsᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ••**
+    somsg = f""" **•• sʏsᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ••**
 ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┣★ **ᴘʟᴀᴛꜰᴏʀᴍ :** `{splatform}`
 ┣★ **ᴘʟᴀᴛꜰᴏʀᴍ ʀᴇʟᴇᴀsᴇ :** `{platform_release}`
@@ -58,4 +59,4 @@ async def give_sysinfo(client, message):
 ┣★ **ᴅɪsᴋ :** `{disk}`
 ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
     """
-    await message.reply(wtf)
+    await message.reply(somsg)
