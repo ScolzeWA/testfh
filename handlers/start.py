@@ -76,7 +76,7 @@ async def help(client: Client, message: Message):
                 InlineKeyboardButton("• 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍 ☤ ", url=f"https://t.me/WORLD_MUSIC_F"),
             ],
             [
-                InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{bu}?startgroup=true",
+                InlineKeyboardButton("ضيـف البـوت لمجمـوعتـك ✅", url=f"https://t.me/{bu}?startgroup=true"),
             ]
          ]
      )
