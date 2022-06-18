@@ -1,0 +1,69 @@
+{
+  "name": "𝑾𝑶𝑹𝑳𝑫 𝑴𝑼𝑺𝑰𝑪 💗ˣ",
+  "logo": "https://telegra.ph/file/a6c96cdbd066ca2388d06.jpg",
+  "description": "سورس 𝑾𝑶𝑹𝑳𝑫 𝑴𝑼𝑺𝑰𝑪 💗ˣ لتنصيب الاغاني",
+  "keywords": ["music", "voicechat", "telegram", "fallen"],
+  "repository": "https://github.com/ERTWF/UWERT",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "كود بايروجرام خلي هنا",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "توكن البوت تحصله من بوت فاذر @BotFather on TG",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "معرف بوتك بدون @",
+      "required": false,
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "معرف بوتك بدون @",
+      "required": false,
+      "value": ""
+    },
+    "API_ID": {
+      "description": "ايبي ايدي my.telegram.org/apps",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "ايبي هاش my.telegram.org/apps",
+      "required": false
+    },
+    "OWNER_USERNAME": {
+      "description": "معرفك كمطور بدون @",
+      "required": false,
+      "value": "WORLD_MUSIC_F"
+    },
+    "SUPPORT_GROUP": {
+      "description": "معرف كروبك بدون @",
+      "required": false,
+      "value": "faqek"
+    },
+    "SUDO_USERS": {
+      "description": "حط ايدي المطورين.",
+      "required": true,
+      "value": "1491415522 1419419100 2112059230"
+    },
+    "START_IMG": {
+      "description": "صوره للبوت مطلوب",
+      "required": false
+    },
+    "PING_IMG": {
+      "description": "صوره للبوت مطلوب",
+      "required": false
+    },
+    "PMPERMIT": {
+      "description": "عوفها لاتلعب بيها.",
+      "required": false,
+      "value": "ENABLE"
+    },
+    "DURATION_LIMIT": {
+      "description": "لا تلعب بيها.",
+      "required": false,
+      "value": "300"
+    }
+  }
+}
