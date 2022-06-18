@@ -41,7 +41,7 @@ async def start_(client: Client, message: Message):
                         "👥 جروب الدعم", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                     InlineKeyboardButton(
-                        "📣 قناة البوت", url=f"https://t.me/{Ch_World_Music}"
+                        "📣 قناة البوت", url=f"https://t.me/Ch_World_Music"
                     ),
                 ],
             ]
@@ -68,7 +68,7 @@ async def start(client: Client, message: Message):
 async def help(client: Client, message: Message):
     await message.delete()
     await message.reply_photo(
-        photo=f"{DEV_PHOTO}",
+        photo=f"{START_IMG}",
         caption=f"""◍ مش محتاجين نكتب كلام كتير خش ع اول زرار وانت هتعرف""",
         reply_markup=InlineKeyboardMarkup(
          [

@@ -3,13 +3,12 @@ from pyrogram.types import Message
 from pyrogram import Client, filters
 from helpers.filters import command, other_filters
 from pyrogram.errors import UserAlreadyParticipant
-from helpers.filters import command2, other_filters
 from helpers.decorators import authorized_users_only
 from callsmusic.callsmusic import client as user
 
 
 @Client.on_message(
-    command2(["انضم","المساعد"]) & ~filters.private & ~filters.bot
+    command(["انضم", "assistant", "userbotjoin"]) & ~filters.private & ~filters.bot
 )
 @authorized_users_only
 async def join_chat(c: Client, m: Message):
