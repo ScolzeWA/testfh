@@ -10,7 +10,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.delete()
     await message.reply_photo(
-        photo=f"{BOT_PHOTO}",
+        photo=f"{START_IMG}",
         caption=f"""**━━━━━━━━━━━━
 اهـلا يـبـنـي.؟ {message.from_user.mention()} !
 مـرحبآ بـك انــا بــوت اقـوم بــتـشـغـيـل الاغــانــي فـي الـمـڪـالـمـه الـصـوتـية .🤔❤؟
