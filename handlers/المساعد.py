@@ -16,12 +16,10 @@ async def join_chat(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
     try:
-         invitelink = await c.export_chat_invite_link(chat_id)
-        if invitelink.startswith("https://t.me/+"):
-            invitelink = invitelink.replace(
-                "https://t.me/+", "https://t.me/joinchat/"
-            )
-            await user.join_chat(invitelink)
+         invite_link = await m.chat.export_invite_link()
+        if "+" in invite_link:
+            link_hash = (invite_link.replace("+", "")).split("t.me/")[1]
+            await user.join_chat(f"https://t.me/joinchat/{link_hash}")
         await m.chat.promote_member(
             (await user.get_me()).id,
             can_manage_voice_chats=True
